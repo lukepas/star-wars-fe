@@ -22,9 +22,11 @@ Before running the app, you need to have the following installed on your machine
 To install the app, follow these steps:
 
 1. Clone the repository:
+
    `git clone https://github.com/lukepas/star-wars-fe.git`
 
    `cd star-wars-fe`
+   
 2. Install the dependencies:
 
    `npm install`
