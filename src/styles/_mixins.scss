@@ -1,0 +1,44 @@
+@mixin bp($point) {
+    @if $point == xxs {
+      @media (min-width: 400px) {
+        @content;
+      }
+    } @else if $point == xs {
+      @media (min-width: 500px) {
+        @content;
+      }
+    } @else if $point == s {
+      @media (min-width: 600px) {
+        @content;
+      }
+    } @else if $point == sm {
+      @media (min-width: 750px) {
+        @content;
+      }
+    } @else if $point == m {
+      @media (min-width: 900px) {
+        @content;
+      }
+    } @else if $point == ml {
+      @media (min-width: 1050px) {
+        @content;
+      }
+    } @else if $point == l {
+      @media (min-width: 1200px) {
+        @content;
+      }
+    } @else if $point == xl {
+      @media (min-width: 1400px) {
+        @content;
+      }
+    } @else if $point == xxl {
+      @media (min-width: 1600px) {
+        @content;
+      }
+    } @else if $point == xxxl {
+      @media (min-width: 1800px) {
+        @content;
+      }
+    }
+  }
+  

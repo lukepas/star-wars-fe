@@ -1,0 +1,148 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.sidebarContainer {
+  display: inline-block;
+  width: 290px;
+  min-width: 290px;
+  min-height: 100vh;
+  color: $primary-main;
+  z-index: 7;
+  height: 100%;
+  padding-bottom: 61px;
+  left: 0;
+  top: 0;
+  background: $bright-color;
+  box-shadow: none;
+  border-right: 1px dashed $color-grey-light;
+
+  .sidebarContent {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+    .mainContent {
+      display: flex;
+      flex-direction: column;
+      overflow: scroll;
+      inset: 0;
+      margin-right: -15px;
+      margin-bottom: -15px;
+      width: 100%;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {display: none;}
+
+      .logoContainer {
+        margin: 27px 0 40px;
+
+        .logo {
+          margin-left: 30px;
+
+          svg {
+            color: $primary-main;
+          }
+        }
+      }
+
+      .sidebarDivider {
+        flex-shrink: 0;
+        border: 0;
+        height: 1px;
+        margin: 10px 18px 16px;
+        background: $color-grey-light;
+      }
+
+      .menuItemsContainer {
+        display: block;
+        margin-top: 30px;
+
+        .menuItems {
+          list-style: none;
+          margin: 0;
+          position: relative;
+          padding: 9px;
+
+          .menuItemsTitle {
+            box-sizing: border-box;
+            list-style: none;
+            font-family: $globalFont;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 0.70rem;
+            color: $black-color;
+            padding: 0 22.5px;
+            line-height: 1.4;
+          }
+
+          .menuSubItemsContainer {
+            display: block;
+
+            .menuSubItems {
+              padding: 9px;
+              list-style: none;
+              margin: 0;
+              position: relative;
+
+              .subItemContainer {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                position: relative;
+                text-decoration: none;
+                width: 100%;
+                box-sizing: border-box;
+                text-align: left;
+                padding: 1px 0;
+
+                .subItem {
+                  display: flex;
+                  color: $color-grey;
+                  width: 100%;
+                  justify-content: flex-start;
+                  padding: 14px 27px;
+                  align-items: center;
+                  position: relative;
+                  box-sizing: border-box;
+                  outline: 0;
+                  border: 0;
+                  cursor: pointer;
+                  user-select: none;
+                  vertical-align: middle;
+                  appearance: none;
+                  text-decoration: none;
+                  font-family: $globalFont;
+                  font-size: 0.875rem;
+                  line-height: 1.75;
+                  min-width: 64px;
+                  border-radius: 10px;
+                  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                  font-weight: 500;
+                  text-transform: none;
+                  margin: 0 0 4px;
+
+                  &:hover {
+                    background-color: rgba(25, 118, 210, 0.06);
+                  }
+
+                  &.activeSubItem {
+                    background-color: rgba(25, 118, 210, 0.12);
+                    color: $primary-main;
+                    font-weight: 600;
+                  }
+
+                  .navigationIcon {
+                    margin-right: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

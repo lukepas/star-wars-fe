@@ -1,0 +1,18 @@
+@import "../../styles/variables";
+
+.cardContainer {
+    border: 1px solid $color-grey-light;
+    padding: 1em;
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+    align-items: center;
+
+    .cardItem {
+        width: 25%;
+
+        span {
+            font-weight: bolder;
+        }
+    }
+}

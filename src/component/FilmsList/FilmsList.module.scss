@@ -1,0 +1,63 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.carouselContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: $globalFont;
+    border-bottom: 1px dashed $color-grey-light;
+    min-height: 400px;
+
+    img {
+        margin-bottom: 20px;
+        max-width: 200px;
+        max-height: 100px;
+    }
+
+    h2 {
+        color: $header-color;
+    }
+
+    .carousel {
+        width: 100%;
+
+        :global(.control-arrow) {
+            background-color: $primary-light;
+            color: $primary-light;
+
+            &:hover,
+            &:focus {
+                background-color: $primary-light;
+            }
+        }
+
+        .carouselItem {
+            min-width: 260px;
+        }
+
+        .carouselButton {
+            border: none;
+            background-color: $primary-light;
+            color: white;
+            font-family: $globalFont;
+            font-size: $font-size-paragraph;
+            padding: 6px 16px;
+            border-radius: 16px;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+                background-color: $primary-light;
+            }
+        }
+    }
+}
+
+.characterCardsContainer {
+    h2 {
+        text-align: center;
+        font-size: $font-size-header;
+    }
+}

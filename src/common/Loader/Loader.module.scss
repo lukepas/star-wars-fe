@@ -1,0 +1,39 @@
+@import "../../styles/variables";
+
+.loader {
+    display: flex;
+    position: relative;
+    height: 100%;
+    left: 0;
+    right: 0;
+
+    &.fullScreen {
+        position: absolute;
+        height: calc(100%);
+    }
+
+    .children {
+        width: 100%;
+
+        &.loaderChildren {
+            opacity: 0.2;
+            pointer-events: none;
+        }
+    }
+
+    .loaderIcon {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $primary-main;
+        font-size: 30px;
+
+        svg {
+            height: 30px;
+            width: 30px;
+        }
+    }
+}
